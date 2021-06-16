@@ -1,0 +1,64 @@
+[Global]
+queue name: short.qc
+project name: hill.prjc
+log_dir: /well/hill/adriank/all_imputations/natpan_imp2/logs2
+array_start: 1
+array_end: 347
+start_chr: 2
+end_chr: 2
+step: all
+mode: two
+#Number from 284-347. 347 are the indexes of mxl indivs
+
+[Programs]
+vcftools: /apps/well/vcftools/0.1.14-gcc4.7.2/bin/vcftools
+bcftools: /apps/well/bcftools/1.4.1/bin/bcftools
+vcf-sort: /apps/well/vcftools/0.1.14-gcc4.7.2/bin/vcf-sort
+bgzip: /apps/well/htslib/1.6/bin/bgzip
+tabix: /apps/well/htslib/1.6/bin/tabix
+shapeit: /apps/well/shapeit/2.r790/shapeit
+impute2: /apps/well/impute2/2.3.0/impute2
+R: /apps/well/R/3.4.3/bin/Rscript
+plink: /apps/well/plink/1.90b3/plink
+perl: perl
+ref_script: /well/hill/adriank/MEX_BImp/scripts/vcf2impute_legend_haps
+val_script: /well/hill/adriank/MEX_BImp/scripts/vcf2impute_gen
+bind_script: /well/hill/adriank/MEX_BImp/scripts/bind_and_annotate_ancestry.R
+sums_script: /well/hill/adriank/MEX_BImp/scripts/make_summaries.R
+infomaf_script: /well/hill/adriank/MEX_BImp/scripts/infomaf_sum.R
+plotmafinfo_script: /well/hill/adriank/MEX_BImp/scripts/plotnfilt.R
+concor_script: /well/hill/adriank/MEX_BImp/scripts/compute_concordance.R
+
+[Files]
+id file: /well/hill/adriank/MEX_BImp/data/array_positions/AMR_ids.txt
+vcf_dir: /well/hill/adriank/MEX_BImp/data/1KGP/vcf
+vcf_name: KGP.chrFF.nomissing.snps.biallelic_sorted.vcf.gz
+array: MEGA
+array_dir: /well/hill/adriank/MEX_BImp/data/array_positions
+map_dir: /well/hill/adriank/MEX_BImp/data/1KGP/genetic_map_b37
+hap_dir: /well/hill/adriank/MEX_BImp/data/1KGP/haps
+index_dir: /well/hill/adriank/MEX_BImp/data/chr_indexes_forarrays
+second_refdir: /well/hill/adriank/MEX_BImp/data/total_natref/phase_homref/ref_format
+second_basename: natpan
+
+[OutDirs]
+script_dir: /well/hill/adriank/all_imputations/natpan_imp2/scripts
+out_refdir: /well/hill/adriank/all_imputations/refs_and_vals/references
+val_dir: /well/hill/adriank/all_imputations/hgmx_imputation/data/validation
+tar_dir: /well/hill/adriank/all_imputations/hgmx_imputation/data/target
+imp_res: /well/hill/adriank/all_imputations/natpan_imp2/results/impute_tworefnoref
+flag_dir: /well/hill/adriank/all_imputations/natpan_imp2/data/flags
+sums_dir: /well/hill/adriank/all_imputations/natpan_imp2/results/sums_tworef
+infomaf_dir: /well/hill/adriank/all_imputations/natpan_imp2/results/infomaf_tworef
+figure_dir: /well/hill/adriank/all_imputations/natpan_imp2/figures/tworef
+
+[ScriptNames]
+make_refname: make_refalt
+val_tarname: val_taralt
+imp_name: imp_2ref
+bind_name: bindres_2ref
+sums_name: make_sums_2ref
+infomaf_name: infomaf_2ref
+plotmafinfo_name: plotinfo_2ref
+concor_name: concor_2ref
+
