@@ -11,7 +11,7 @@ There are four main steps in the analysis:
 
 Now I will detail the contents of each folder
 
-#### Panel creation
+### Panel creation
 
 In this folder you will find the sprits used to clean and merge the different data sources.
 
@@ -19,7 +19,7 @@ In this folder you will find the sprits used to clean and merge the different da
 + merge_hgdp_sgmx.sh: This script merges HGDP, SGDP and INMEGEN data into a single panel using bcftools.
 + merge_mx50_hgdp.sh: This script merges HGDP-SGDP-INMEGEN with the 50 Mexican genomes using bcftools.
 
-#### Running imputation and evaluating performance
+### Running imputation and evaluating performance
 
 In this folder you will find the necessary scripts for running and evaluating imputation performance using different reference panels.
 
@@ -31,7 +31,7 @@ In this folder you will find the necessary scripts for running and evaluating im
 + plotnfilt.R: This script plots the results from infomaf_sum.R.
 + compute_concordance: This script calculates concordance between the most likely imputed allele and the real allele.
 
-#### Demographic simulations
+### Demographic simulations
 
 In this folder you will find the scripts used to generate the demographic simulation data and the subsequent analysis.
 
@@ -39,8 +39,13 @@ In this folder you will find the scripts used to generate the demographic simula
 + make_natrefpanel.sh: Creates the different imputation reference panels with varying number of native individuals (0, 100, ..., 3000)
 + subsamp60k.R: Simulate a SNP array based on the MEGA array frequencies in the 1KGP European population.
 + get_varfreqs: Script to calculate the variant frequencies of the simulated data.
-+ imp[number].sh: Scripts to run imputation with the different references. 
++ imp[number].sh: Scripts to run imputation with the different references.
 
-#### Figure creation
+### Figure creation
 
 In this folder you will find the scripts used to generate the figures.
+
++ plot_natpancomp.R: Plot the imputation r2 results with the two references.
++ plot_supp.R. Supplementary plots
++ simulation_plot: Plot the results of the demographic simulations section
++ create_fig1.R: Includes NATS admixture plot, map of the samples and SNP category in 1KGP + NATS
